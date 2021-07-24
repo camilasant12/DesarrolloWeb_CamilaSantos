@@ -1,0 +1,406 @@
+/*RESET CSS  */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: MinionCondensed;
+	src: url('./font/MinionCondensed.otf');
+}
+
+html {
+    font-size: 120%; /* 100% = 16px */
+    font-family: MinionCondensed;
+}
+body{
+	width: 100%;
+}
+h1{
+	font-size: 2em;
+	font-weight: bold;
+}
+h2, h3, h4, h5{
+	font-weight: normal;
+}
+
+/*---------------------------------------------*/
+/*Header*/
+.barraNavegacion{
+	display: flex;
+	flex-direction: row;
+	background-color: #fdfdfd;
+	position: sticky;
+	top: 0px;
+	width: 100%;
+}
+header{
+	height: 15vh;
+	display: flex;
+	width: 25%;
+	background-color: #fdfdfd;
+}
+
+header a{
+	display: flex;
+}
+
+header a #imgLogo{
+	flex-shrink: 1;
+}
+
+/*Navegador*/
+nav{
+	width: 73%;
+	height: 15vh;
+	background-color: #fdfdfd;
+	margin-left: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul li{	
+	display: inline-block;
+	padding-left: 30px;
+}
+
+nav ul li a{
+	color: #152b42;
+	font-size: 1.2em;
+}
+
+nav ul li a:hover{
+	color: red;
+}
+
+
+/*Secciòn 1*/
+.informacion{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/*Index - Nosotros*/
+.informacion .seccionInformativo{
+	display: flex;
+	flex-direction: row;
+	height: 50vh;
+}
+.informacion .seccionInformativo .seccionTitulo {
+	flex: 1;	
+	border-radius: 2px;
+	color: #fff;
+	background-color: #0cbaba;
+	background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+	animation-name: texto;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+
+}
+.informacion .seccionInformativo .seccionTitulo h1, h2, p{
+	margin-top: 140px;
+}
+.informacion .seccionInformativo .seccionTexto{
+	flex: 2;
+
+}
+
+/*Abogados*/
+#nuestrosAbogados{
+	display: flex;
+	flex-direction: column;
+}
+#nuestrosAbogados #tituloAbogados{
+	color: #152b42;
+}
+
+#abogados{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+#abogado1{
+	display: flex;
+	flex-direction: row;	
+}
+#abogado2{
+	display: flex;
+	flex-direction: row-reverse;	
+}
+.textoAbogados{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+/*Footer*/
+footer{
+	margin-top: 100px;
+	width: 100%;
+	height: 20vh;
+	background-color: #fdfdfd;
+
+}
+
+#direccion{
+	float: left;
+	width: 50%;
+	height: 100px;
+	text-align: left;
+	color: #152b42;;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+#menu{
+	float: right;
+	width: 50%;
+	height: 100px;
+	text-align: right;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+#menu li{
+	list-style-type: none;
+}
+
+#menu a{
+		color: #152b42;
+}
+
+#copy{
+	width: 100%;
+	height: 20px;
+	margin-top: 120px;
+	text-align: center;
+	color: #152b42;
+}
+/*Media Queries Mobile First*/
+@media (min-width: 320px)
+{
+	nav{
+		width: 70%;
+		height: 20vh;
+		background-color: #fdfdfd;
+		margin-left: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	section#imagen #section{
+		width: 470px;	
+		overflow: hidden;
+	}
+	h1{
+		font-size: 1.3em;
+	}
+}
+
+@media (min-width: 600px)
+{
+	nav{
+		width: 50%;
+		height: 15vh;
+		background-color: #fdfdfd;
+		margin-left: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	section#imagen #section{
+		width: 600px;	
+		overflow: hidden;
+	}
+
+}
+
+
+@media (min-width: 768px)
+{
+	nav{
+		width: 60%;
+		height: 15vh;
+		background-color: #fdfdfd;
+		margin-left: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	section#imagen #section{
+		width: 740px;	
+		overflow: hidden;
+	}
+
+}
+
+@media (min-width: 1024px)
+{
+	section#imagen #section{
+		width: 1300px;	
+		overflow: hidden;
+	}
+
+}
+@media (min-width: 1200px)
+{
+	section#imagen #section{
+		width: 1512px;	
+		overflow: hidden;
+	}
+
+
+}
+
+
+/*Grids en index*/
+header{
+	grid-area: header;
+}
+nav{
+	grid-area: nav;
+}
+section#imagen{
+	grid-area: imgSection;
+}
+section#titulo{
+	grid-area: indexTitulo;
+}
+aside{
+	grid-area: aside;
+}
+
+footer {
+	grid-area: footer;
+}
+
+
+#grillaIndex{
+	display: grid;
+	grid-template-areas: 
+	"header            nav              nav"
+	"imgSection        imgSection       imgSection"
+	
+	"indexTitulo   	   aside            aside"
+	"footer            footer           footer";
+	
+
+	grid-template-rows: auto;
+	grid-template-columns: 25% 25% 50%; 
+
+}
+
+
+#titulo {
+	flex: 1;
+	border-radius: 2px;
+	color: #fff;
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+
+}
+
+/*Grids en servicios*/
+header #imgLogo{
+	grid-area: header;
+}
+nav{
+	grid-area: nav;
+}
+.informacion #imgSection #section{
+	grid-area: imgSection;
+}
+.informacion #servicios .seccionTitulo h2{
+	grid-area: serviciosTitulo;
+}
+
+.informacion #servicios .seccionTexto ul{
+	grid-area: serviciosTexto;
+	
+}
+
+.footer {
+	grid-area: footer;
+}
+
+
+#gridServicios{
+	display: grid;
+	grid-template-areas: 
+	"header            nav              nav"
+	"imgSection        imgSection       imgSection"
+	"serviciosTitulo   serviciosTexto   serviciosTexto"
+	"footer            footer           footer";
+	
+
+	grid-template-rows: 8% 50% 30% 12%;
+	grid-template-columns: 25% 50% 25%; 
+
+}
+
+
+
+
+
+/*Animaciones*/
+@keyframes texto{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1
+
+	}
+}
+#abogado1 #abogadoImg1{
+	animation-name: imagenes;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes imagenes{
+	0%{
+		transform: rotateZ(20deg);
+	}
+	30%{
+		transform: rotateZ(50deg);	
+		transform: scale(1,2);
+	}
+	50%{
+		transform: rotateZ(90deg);
+
+	}
+	70%{
+		transform: rotateZ(180deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Seccion por mejorar*/
+
+#contactoForm form{
+	background-color: #b1b1b1;
+}
