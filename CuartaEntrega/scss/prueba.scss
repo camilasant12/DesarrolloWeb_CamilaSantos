@@ -1,0 +1,159 @@
+/*SCSS de prueba */
+/*RESET CSS  */
+* {
+	margin: 0;
+	padding: 0;   
+}
+@font-face{
+    font-family: MinionCondensed;
+    src: url('./font/MinionCondensed.otf');
+  }
+  
+  html {
+    /*font-family: sans-serif;*/
+    font-family: MinionCondensed;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+body{
+   
+        margin: 0px;
+        font-family: MinionCondensed;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+      
+    width: 100%;
+    #barraNavegacion{
+        display: flex;
+        flex-direction: row;
+        background-color: #fdfdfd;
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        header{
+            height: 15vh;
+            display: flex;
+            width: 25%;
+            background-color: #fdfdfd;
+        }
+        nav{
+            width: 73%;
+            height: 15vh;
+            background-color: #fdfdfd;
+            margin-left: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .menu li{	
+                display: inline-block;
+                padding-left: 30px;
+                list-style: none;
+                .menu__enlace{
+                    color: #152b42;
+                    font-size: 1.2em;
+                }
+                .menu__enlace:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    .informacion{
+        text-align: center;
+	    display: flex;
+	    flex-direction: column;
+        .informacion__imagen{
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            
+        }
+        .seccionInformativo{
+            display: flex;
+            flex-direction: row;
+            height: 50vh;
+            
+            .informacion__bienvenido {
+                display: flex;
+                background-color: #eafcfc50;
+                height: 50vh;
+                color: #051157;
+                width: 50%;
+                align-items: center;
+                justify-content: center;
+            }
+            .informacion__texto h3{
+                display: flex;
+                flex: 2;
+                flex-direction: column;
+                height: 50vh;
+                align-items: center;
+                justify-content: center;
+            }
+            .informacion__texto ul{
+                list-style: none;
+                display: flex;
+                flex: 2;
+                flex-direction: column;
+                height: 50vh;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+    }
+ 
+          
+   
+    
+    /*Footer*/
+    footer{
+        $ancho: 100%;
+	    margin-top: 100px;
+	    width: $ancho;
+	    height: 20vh;
+	    background-color: #fdfdfd;
+        .footer__direccion{
+            float: left;
+            width: $ancho/2;
+            height: 100px;
+            text-align: left;
+            overflow: hidden;
+            margin-top: 20px;
+            color: #152b42;
+        }
+        .footer__menu{
+            float: right;
+            width: $ancho/2;
+            height: 100px;
+            text-align: left;
+            overflow: hidden;
+            margin-top: 20px;
+            color: #152b42;
+            li{
+                list-style-type: none;
+            }
+        }
+        .footer__copy{
+            width: 100%;
+            height: 20px;
+            margin-top: 120px;
+            text-align: center;
+            color: #152b42;
+        }
+        a{
+            color: #051157; 
+        }
+    }
+    
+    
+}
+   
